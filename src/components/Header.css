@@ -1,0 +1,30 @@
+.header a {
+  color: #889196;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.header nav {
+  background-color: #222F3E;
+}
+
+.header a.active,
+.header a:hover {
+  color: #EB6108;
+  
+}
+
+.header .lang_btn {
+  padding: 7px;
+  font-size: 22px;
+  color: #889196;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.header .lang_btn.active_lang {
+  border: 2px solid #EB6108;
+  color: #EB6108;
+  border-radius: 50%;
+}

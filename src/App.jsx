@@ -1,10 +1,14 @@
-import './App.css'
+import './App.css';
+import { Footer, Header, MainContent } from './components';
+
 
 function App() {
 
   return (
     <>
-      <h1>Amaz Market</h1>
+    <Header />
+    <MainContent />  
+    <Footer />
     </>
   )
 }
