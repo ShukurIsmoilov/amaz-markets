@@ -1,0 +1,1 @@
+export { BuyAccountPage } from "./buy-account.page";

@@ -1,6 +1,11 @@
+import { AiFillApple } from "react-icons/ai";
+
 const Footer = () => {
+  const shouldBeRed = true;
   return (
-    <footer>Footer</footer>
+    <footer>
+      <AiFillApple color={shouldBeRed ? "red" : "grey" } size={100} />
+    </footer>
   )
 }
 

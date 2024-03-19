@@ -1,19 +1,20 @@
 import { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
   const headerLinksFromStorageEn = [
     {
       id: "hl1",
-      to: "buy_account",
+      to: "buy-account",
       text: "Buy Account",
       active: true,
     },
     {
       id: "hl2",
-      to: "sell_account",
+      to: "sell-account",
       text: "Sell Account",
       active: false,
     },
@@ -96,12 +97,13 @@ const Header = () => {
             {headerLinks.map((link) => {
               return (
                 <li className="link_list_item" key={link.id}>
-                  <a
+                  <Link
                     className={link.active ? "active_link" : ""}
                     onClick={() => setActiveLinkId(link.id)}
+                    to={`/${link.to}`}
                   >
                     {link.text}
-                  </a>
+                  </Link>
                 </li>
               )
             })}
