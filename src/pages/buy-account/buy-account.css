@@ -1,0 +1,35 @@
+.main-banner {
+  padding-top: 50px;
+  background-color: #080626;
+}
+
+.main-banner .container {
+  display: flex;
+  gap: 70px;
+}
+
+.main-banner .main-banner-info h2,
+.main-banner .main-banner-info button {
+  color: #fefefe;
+}
+
+.main-banner .main-banner-info h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+
+.main-banner .main-banner-info p {
+  color: #889196;
+  font-size: 26px;
+  margin-bottom: 35px;
+}
+
+.main-banner .main-banner-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link-icon:hover {
+  fill: #fefefe;
+}
