@@ -8,8 +8,8 @@ import {
 } from "react-icons/fa6";
 
 import { BsArrowRightCircleFill } from "react-icons/bs";
-import { Button } from "../../components/Button";
-import { SocialLinkButton } from "../../components/SocialLinkButton";
+import { Button } from "../../components/button";
+import { SocialLinkButton } from "../../components/social-link-button";
 
 
 
