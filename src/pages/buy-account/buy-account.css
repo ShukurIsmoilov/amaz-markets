@@ -79,3 +79,79 @@
 .custom-shape-divider-bottom-1710995555 .shape-fill {
   fill: #FFFFFF;
 }
+
+.global-selling-continents {
+  text-align: center;
+  background-color: #f8f8f8;
+  color:  #080626;
+  padding: 110px 0;
+}
+
+.global-selling-continents h2 {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  margin: 0 auto;
+  max-width: 500px;
+  margin-bottom: 70px;
+}
+
+.gsc-cards {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+}
+
+.gsc-card {
+  width: 300px;
+}
+
+.gsc-card-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.gsc-card-content {
+  background-color: #fefefe;
+  border-radius: 15px;
+  padding: 30px;
+  height: 450px;
+}
+
+.gsc-card-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.gsc-card-content ul a {
+  text-decoration: none;
+  color: #889196;
+}
+
+.gsc-card-content ul a:hover {
+  color: #EB6108;
+}
+
+.gsc-numbers {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gsc-numbers-card {
+  width: 250px;
+}
+
+.gsc-numbers-card span {
+  font-size: 100px;
+  font-weight: 400;
+}
+
+.gsc-numbers-card p {
+  font-size: 24px;
+  margin-top: -20px;
+}
