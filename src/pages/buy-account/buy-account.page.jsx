@@ -17,6 +17,11 @@ const BuyAccountPage = () => {
   return (
     <main>
       <section className="main-banner">
+        <div className="custom-shape-divider-bottom-1710995555">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" className="shape-fill"></path>
+          </svg>
+        </div>
         <div className="container">
           <div className="main-banner-info">
             <h2>
@@ -71,6 +76,11 @@ const BuyAccountPage = () => {
             <img src={laptops} alt="laptops" />
           </div>
         </div>
+        <a href="#new-section" className="scroll-link" >scroll</a>
+        <span className="scroll-link-line"></span>
+      </section>
+      <section className="scroll_section" style={{ height: "900px" }} id="new-section">
+
       </section>
     </main >
   )

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./SocialLinkButton.css";
+import "./social-link-button.css";
 
 // eslint-disable-next-line react/prop-types
 const SocialLinkButton = ({ to, target, color, icon }) => {

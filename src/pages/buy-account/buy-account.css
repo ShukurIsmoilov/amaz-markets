@@ -1,6 +1,7 @@
 .main-banner {
   padding-top: 50px;
   background-color: #080626;
+  position: relative;
 }
 
 .main-banner .container {
@@ -32,4 +33,49 @@
 
 .social-link-icon:hover {
   fill: #fefefe;
+}
+
+.scroll-link {
+  color: #fefefe;
+  z-index: 1;
+  position: absolute;
+  width: 200px;
+  text-align: center;
+  right: 50%;
+  bottom: 30px;
+  text-transform: uppercase;
+  transform: translateX(50%);
+  text-decoration: none;
+  /* transition: html  9s ease-in-out; */
+}
+
+.scroll-link-line {
+  display: block;
+  height: 30px;
+  color: #fefefe;
+  position: absolute;
+  border-right: 2px solid #fefefe;
+  z-index: 1;
+  right: 50%;
+  bottom: 0;
+}
+
+.custom-shape-divider-bottom-1710995555 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1710995555 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 36px;
+}
+
+.custom-shape-divider-bottom-1710995555 .shape-fill {
+  fill: #FFFFFF;
 }
