@@ -4,6 +4,8 @@ import laptops from "../../assets/laptops.png";
 import america from "../../assets/america.png";
 import europe from "../../assets/europe.png";
 import asia from "../../assets/asia.png";
+import us_flag_url from "../../assets/us-flag.svg";
+import gb_flag_url from "../../assets/gb-flag.svg";
 
 import {
   FaSquareFacebook,
@@ -13,12 +15,100 @@ import {
 } from "react-icons/fa6";
 
 import { BsArrowRightCircleFill } from "react-icons/bs";
+import { IoIosArrowDown } from "react-icons/io";
+import { RxCrossCircled } from "react-icons/rx";
+
 import { Button } from "../../components/button";
 import { SocialLinkButton } from "../../components/social-link-button";
+import { useState } from "react";
 
-
+const agedAccounts = [
+  {
+    businessName: "Flagman Shop",
+    market: "Us",
+    type: "Pro Account",
+    age: 2019,
+    reviews: "6 reviews",
+    ratio: "100% positive",
+    price: 1000,
+    currency: "USD",
+  },
+  {
+    businessName: "Health Care Direct UK",
+    market: "gB",
+    type: "Pro Account",
+    age: 2019,
+    reviews: "6 reviews",
+    ratio: "100% positive",
+    price: 1000,
+    currency: "USD",
+  },
+  {
+    businessName: "Flagman Shop",
+    market: "us",
+    type: "Pro Account",
+    age: 2019,
+    reviews: "6 reviews",
+    ratio: "100% positive",
+    price: 1000,
+    currency: "USD",
+  },
+  {
+    businessName: "Health Care Direct UK",
+    market: "GB",
+    type: "Pro Account",
+    age: 2019,
+    reviews: "6 reviews",
+    ratio: "100% positive",
+    price: 1000,
+    currency: "USD",
+  },
+  {
+    businessName: "Flagman Shop",
+    market: "US",
+    type: "Pro Account",
+    age: 2019,
+    reviews: "6 reviews",
+    ratio: "100% positive",
+    price: 1000,
+    currency: "USD",
+  },
+  {
+    businessName: "Health Care Direct UK",
+    market: "GB",
+    type: "Pro Account",
+    age: 2019,
+    reviews: "6 reviews",
+    ratio: "100% positive",
+    price: 1000,
+    currency: "USD",
+  },
+  {
+    businessName: "Flagman Shop",
+    market: "US",
+    type: "Pro Account",
+    age: 2019,
+    reviews: "6 reviews",
+    ratio: "100% positive",
+    price: 1000,
+    currency: "USD",
+  },
+  {
+    businessName: "Health Care Direct UK",
+    market: "GB",
+    type: "Pro Account",
+    age: 2019,
+    reviews: "6 reviews",
+    ratio: "100% positive",
+    price: 1000,
+    currency: "GBP",
+  },
+]
 
 const BuyAccountPage = () => {
+  const [moreInfoOpened, setMoreInfoOpened] = useState(false);
+  const [moreInfoData, setMoreInfoData] = useState();
+
   return (
     <main>
       <section className="main-banner">
@@ -199,6 +289,111 @@ const BuyAccountPage = () => {
           </div>
         </div>
       </section>
+
+      <section className="aged-accounts">
+        <div className="container">
+          <h2>
+            List of aged accounts for sale
+          </h2>
+
+          <div className="aged-accounts-table-wrapper">
+            <div className="aged-accounts-table-title">
+              Selling
+            </div>
+            <table className="aged-accounts-table">
+              <thead>
+                <tr>
+                  <th>Business name</th>
+                  <th>Market</th>
+                  <th>Type</th>
+                  <th>Account age</th>
+                  <th>Reviews</th>
+                  <th>Ratio</th>
+                  <th>Price</th>
+                  <th>Account details</th>
+                </tr>
+              </thead>
+              <tbody>
+                {
+                  agedAccounts.length > 0 && agedAccounts.map((account, index) => (
+                    <tr key={index}>
+                      <td>{account.businessName}</td>
+                      <td>
+                        <img
+                          src={String(account.market).toUpperCase() === 'US'
+                            ? us_flag_url : String(account.market).toUpperCase() === 'GB'
+                              ? gb_flag_url : 'default.png'}
+                          alt={`${String(account.market).toUpperCase().length > 0
+                            ? String(account.market).toUpperCase() : "default"} rounded flag`} />
+                        <span>{String(account.market).toUpperCase()}</span>
+                      </td>
+                      <td>{account.type}</td>
+                      <td>{account.age}</td>
+                      <td>{account.reviews}</td>
+                      <td>{account.ratio}</td>
+                      <td>{`${account.currency === 'USD' ? '$' : '£'} ${account.price}`}</td>
+                      <td>
+                        <button onClick={() => {
+                          setMoreInfoData(account)
+                          setMoreInfoOpened(true)
+                        }}
+                        > More Info <IoIosArrowDown size={20} /></button>
+                      </td>
+                    </tr>))
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {
+        moreInfoOpened &&
+        (<>
+          <div
+            className="account-details-modal-bg"
+            onClick={() => {
+              setMoreInfoData(null)
+              setMoreInfoOpened(false)
+            }}
+          >
+          </div>
+          <div className="account-details-modal">
+            <h2>Account details</h2>
+            <div className="account-details-modal-data-cell">
+              Business name: <span>{moreInfoData?.businessName}</span>
+            </div>
+            <div className="account-details-modal-data-cell">
+              Market: <span>{moreInfoData?.market}</span>
+            </div>
+            <div className="account-details-modal-data-cell">
+              Type: <span>{moreInfoData?.type}</span>
+            </div>
+            <div className="account-details-modal-data-cell">
+              Account age: <span>{moreInfoData?.age}</span>
+            </div>
+            <div className="account-details-modal-data-cell">
+              Reviews: <span>{moreInfoData?.reviews}</span>
+            </div>
+            <div className="account-details-modal-data-cell">
+              Ratio: <span>{moreInfoData?.ratio}</span>
+            </div>
+            <div className="account-details-modal-data-cell">
+              Price: <span>{`${moreInfoData?.currency === 'USD' ? '$' : '£'} ${moreInfoData?.price}`}</span>
+            </div>
+            <div
+              className="account-details-modal-cross"
+              onClick={() => {
+                setMoreInfoData(null)
+                setMoreInfoOpened(false)
+              }}
+            >
+              <RxCrossCircled color="red" />
+            </div>
+
+          </div>
+        </>)
+      }
     </main >
   )
 }
