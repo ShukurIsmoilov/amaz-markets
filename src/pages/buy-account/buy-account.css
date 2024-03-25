@@ -180,7 +180,7 @@
   border-left: 1px solid #f0f0f0;
 }
 
-.aged-accounts-table tbody tr {
+.aged-accounts-table tr {
   border-bottom: 1px solid #f0f0f0;
 }
 
@@ -194,11 +194,16 @@
   font-weight: 500;
 }
 
+.aged-accounts-table th:first-child,
+.aged-accounts-table td:first-child {
+  padding-left: 20px;
+}
+
+
 .aged-accounts-table th:nth-child(7),
 .aged-accounts-table td:nth-child(7) {
   text-align: right;
   width: 100px;
-
 }
 
 .aged-accounts-table th:nth-child(8),
