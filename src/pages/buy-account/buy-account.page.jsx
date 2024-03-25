@@ -347,9 +347,8 @@ const BuyAccountPage = () => {
         </div>
       </section>
 
-      {
-        moreInfoOpened &&
-        (<>
+      {moreInfoOpened && (
+        <>
           <div
             className="account-details-modal-bg"
             onClick={() => {
@@ -392,8 +391,8 @@ const BuyAccountPage = () => {
             </div>
 
           </div>
-        </>)
-      }
+        </>
+      )}
     </main >
   )
 }
