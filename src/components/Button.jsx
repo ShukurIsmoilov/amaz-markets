@@ -46,7 +46,6 @@ const Button = ({
         setMouseOverButton(true)
         e.target.closest("button").style.backgroundColor = "transparent";
         e.target.closest("button").style.color = color;
-        console.log(e.type);
       }}
       onMouseLeave={(e) => {
         setMouseOverButton(false)
@@ -62,8 +61,8 @@ const Button = ({
         : ""
       }
       {text}
-    </button >
-    )
+    </button>
+  )
 }
 
-    export {Button};
+export { Button };
