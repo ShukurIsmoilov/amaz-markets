@@ -14,6 +14,7 @@ import shield_img_url from "../../assets/shield.png";
 import wifi_img_url from "../../assets/wifi.png";
 import deal_img_url from "../../assets/deal.png";
 import money_bag_img_url from "../../assets/money-bag.png";
+import request_girl_url from "../../assets/request-girl.png";
 
 import {
   FaSquareFacebook,
@@ -22,7 +23,6 @@ import {
   FaTelegram,
 } from "react-icons/fa6";
 
-import { BsArrowRightCircleFill } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
 import { RxCrossCircled } from "react-icons/rx";
 
@@ -149,6 +149,9 @@ const BuyAccountPage = () => {
             </p>
 
             <Button
+              display="flex"
+              alignItems="center"
+              textColor="#fefefe"
               color="#ed7212"
               text="get started"
               uppercase
@@ -157,7 +160,7 @@ const BuyAccountPage = () => {
               fz="20px"
               fw="700"
               brs={5}
-              icon={<BsArrowRightCircleFill size={30} color="#fefefe" />}
+              withArrowIcon
             />
 
             <div className="main-banner-socials">
@@ -432,6 +435,60 @@ const BuyAccountPage = () => {
             </div>
             <img src={earth_img_url} alt="phone" />
 
+          </div>
+        </div>
+      </section>
+      <section className="request">
+        <div className="container">
+          <div className="benefits-info">
+            <img src={request_girl_url} alt="girl" />
+            <div className="benefits-info-cards">
+              <h2>Leave a request</h2>
+              <p>
+                It will take you less than sixty seconds. A member
+                of our team will contact you shortly after.
+              </p>
+              <form>
+                <div className="request-form-input-wrapper">
+                  <label htmlFor="request-email">Email Address*</label>
+                  <input
+                    id="request-email"
+                    type="email"
+                    placeholder="info@gmail.com"
+                    required
+                  />
+                </div>
+                <div className="request-form-input-wrapper">
+                  <label htmlFor="request-phone">Telephone number*</label>
+                  <input
+                    id="request-phone"
+                    type="text"
+                    placeholder="900 800 700"
+                    required
+                  />
+                </div>
+                <div className="request-form-input-wrapper">
+                  <label htmlFor="request-message">Your message</label>
+                  <input
+                    id="request-message"
+                    type="text"
+                    placeholder="Your message here"
+                  />
+                </div>
+                <Button
+                  textAlign="center"
+                  w="100%"
+                  color="#ed7212"
+                  textColor="#fefefe"
+                  p="17px 50px"
+                  m=" 0 0 70px 0"
+                  fz="20px"
+                  fw="700"
+                  brs="5px"
+                  text="Send"
+                />
+              </form>
+            </div>
           </div>
         </div>
       </section>
