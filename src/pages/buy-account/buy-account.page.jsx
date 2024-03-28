@@ -6,6 +6,14 @@ import europe from "../../assets/europe.png";
 import asia from "../../assets/asia.png";
 import us_flag_url from "../../assets/us-flag.svg";
 import gb_flag_url from "../../assets/gb-flag.svg";
+import phone_img_url from "../../assets/phone-messages.png";
+import earth_img_url from "../../assets/earth.png";
+import verified_img_url from "../../assets/verified-account.png";
+import conversation_img_url from "../../assets/conversation.png";
+import shield_img_url from "../../assets/shield.png";
+import wifi_img_url from "../../assets/wifi.png";
+import deal_img_url from "../../assets/deal.png";
+import money_bag_img_url from "../../assets/money-bag.png";
 
 import {
   FaSquareFacebook,
@@ -343,6 +351,87 @@ const BuyAccountPage = () => {
                 }
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+      <section className="benefits-and-verified-accounts">
+        <div className="container">
+          <div className="benefits-info">
+            <img src={phone_img_url} alt="phone" />
+            <div className="benefits-info-cards">
+              <h2>Benefits you will get</h2>
+              <div className="benefits-info-card">
+                <img src={verified_img_url} alt="verified account icon" />
+                <div className="benefits-info-card-text">
+                  <h3>Verified Amazon Accounts</h3>
+                  <p>
+                    Each account goes through an expanded
+                    multi-level authentication before the commercial offer.
+                  </p>
+                </div>
+              </div>
+              <div className="benefits-info-card">
+                <img src={conversation_img_url} alt="verified account icon" />
+                <div className="benefits-info-card-text">
+                  <h3>Deal Safety</h3>
+                  <p>
+                    We ensure the security of the account transaction
+                    between the seller and the buyer.
+                  </p>
+                </div>
+              </div>
+              <div className="benefits-info-card">
+                <img src={shield_img_url} alt="verified account icon" />
+                <div className="benefits-info-card-text">
+                  <h3>After-purchase Support</h3>
+                  <p>
+                    We will provide you a technical support
+                    within 14 days after the purchase. We will be happy to answer all your questions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="benefits-info">
+            <div className="benefits-info-cards">
+              <h2 className="verified-title">Amazon verified accounts</h2>
+              <p>
+                Become an Amazon seller! We offer country-based
+                accounts for selling on Amazon.
+              </p>
+              <div className="benefits-info-card">
+                <img src={wifi_img_url} alt="verified account icon" />
+                <div className="benefits-info-card-text">
+                  <h3>Work around the world</h3>
+                  <p>
+                    The account will be installed on the server
+                    with a special IP address.al offer.
+                  </p>
+                </div>
+              </div>
+              <div className="benefits-info-card">
+                <img src={deal_img_url} alt="verified account icon" />
+                <div className="benefits-info-card-text">
+                  <h3>All types of selling</h3>
+                  <p>
+                    Dropshipping, Online Arbitrage,
+                    Private Label. offer.
+                  </p>
+                </div>
+              </div>
+              <div className="benefits-info-card">
+                <img src={money_bag_img_url} alt="verified account icon" />
+                <div className="benefits-info-card-text">
+                  <h3>Money flow</h3>
+                  <p>
+                    All payments will go to your Payoneer. offer.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <img src={earth_img_url} alt="phone" />
+
           </div>
         </div>
       </section>
