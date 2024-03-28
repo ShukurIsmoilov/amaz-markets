@@ -116,6 +116,22 @@ const agedAccounts = [
 const BuyAccountPage = () => {
   const [moreInfoOpened, setMoreInfoOpened] = useState(false);
   const [moreInfoData, setMoreInfoData] = useState();
+  const [emailInputValue, setEmailInputValue] = useState("")
+  const [showEmailInputError, setShowEmailInputError] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // ******@gmail.com
+    // ******@mail.com
+
+
+    if (emailInputValue.endsWith("@gmail.com") || emailInputValue.endsWith("@mail.com")) {
+      console.log("correct email");
+      setShowEmailInputError(false)
+    } else {
+      setShowEmailInputError(true)
+    }
+  }
 
   return (
     <main>
@@ -448,7 +464,7 @@ const BuyAccountPage = () => {
                 It will take you less than sixty seconds. A member
                 of our team will contact you shortly after.
               </p>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="request-form-input-wrapper">
                   <label htmlFor="request-email">Email Address*</label>
                   <input
@@ -456,15 +472,26 @@ const BuyAccountPage = () => {
                     type="email"
                     placeholder="info@gmail.com"
                     required
+                    value={emailInputValue}
+                    onChange={(e) => {
+                      setEmailInputValue(e.target.value)
+                    }}
                   />
+                  {showEmailInputError && (
+                    <div className="input-error-message">
+                      Error not supported email!
+                    </div>
+                  )}
+
                 </div>
                 <div className="request-form-input-wrapper">
                   <label htmlFor="request-phone">Telephone number*</label>
                   <input
                     id="request-phone"
-                    type="text"
+                    type="number"
                     placeholder="900 800 700"
                     required
+                    max={999999999}
                   />
                 </div>
                 <div className="request-form-input-wrapper">
